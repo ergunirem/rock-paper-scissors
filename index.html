@@ -7,6 +7,37 @@
             return items[Math.floor(Math.random() * items.length)]
         }
 
+        function playRound(playerSelection, computerSelection) {
+
+            if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
+                return "You lose! Paper beats Rock";
+            }
+
+            else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
+                return "You win! Rock beats Scissors";
+            }
+
+            else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
+                return "You win! Paper beats Rock";
+            }
+
+            else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
+                return "You lose! Scissors beats Paper";
+            }
+
+            else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
+                return "You lose! Rock beats scissors";
+            }
+
+            else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
+                return "You win! Scissors beats Paper";
+            }
+
+            else {
+                return "It's a tie!";
+            } 
+
+        }
 
     </script>
 </html>
