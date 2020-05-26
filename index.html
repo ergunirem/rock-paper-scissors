@@ -39,5 +39,38 @@
 
         }
 
+        function game() {
+            let scorePlayer = 0;
+            let scoreComputer = 0;
+            
+            for (i = 0; i < 5; i++) {
+                let playerSelection = window.prompt("Please enter your choice");
+                let computerSelection = computerPlay();
+                let outcome = playRound(playerSelection, computerSelection);
+                if (outcome.includes('win')) {
+                    scorePlayer++;
+                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+                }
+                else if (outcome.includes('lose')) {
+                    scoreComputer++;
+                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+                }
+                else {
+                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+                }
+            }
+
+            if (scorePlayer > scoreComputer) {
+                window.alert('After 5 rounds, you win!' + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+            }
+
+            else if (scorePlayer < scoreComputer) {
+                window.alert('After 5 rounds, you lose!' + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+            }
+
+            else {
+                window.alert("After 5 rounds, it's a tie!" + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
+            }
+         }
     </script>
 </html>
