@@ -1,76 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <script>
-    
-        function computerPlay() {
-            let items = ['rock', 'paper', 'scissors'];
-            return items[Math.floor(Math.random() * items.length)]
-        }
+    <head>
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-        function playRound(playerSelection, computerSelection) {
-
-            if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
-                return "You lose! Paper beats Rock";
-            }
-
-            else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
-                return "You win! Rock beats Scissors";
-            }
-
-            else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
-                return "You win! Paper beats Rock";
-            }
-
-            else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
-                return "You lose! Scissors beats Paper";
-            }
-
-            else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
-                return "You lose! Rock beats scissors";
-            }
-
-            else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
-                return "You win! Scissors beats Paper";
-            }
-
-            else {
-                return "It's a tie!";
-            } 
-
-        }
-
-        function game() {
-            let scorePlayer = 0;
-            let scoreComputer = 0;
-            
-            for (i = 0; i < 5; i++) {
-                let playerSelection = window.prompt("Please enter your choice");
-                let computerSelection = computerPlay();
-                let outcome = playRound(playerSelection, computerSelection);
-                if (outcome.includes('win')) {
-                    scorePlayer++;
-                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-                }
-                else if (outcome.includes('lose')) {
-                    scoreComputer++;
-                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-                }
-                else {
-                    window.alert(outcome + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-                }
-            }
-
-            if (scorePlayer > scoreComputer) {
-                window.alert('After 5 rounds, you win!' + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-            }
-
-            else if (scorePlayer < scoreComputer) {
-                window.alert('After 5 rounds, you lose!' + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-            }
-
-            else {
-                window.alert("After 5 rounds, it's a tie!" + `Score = Player ${scorePlayer} - Computer ${scoreComputer}`);
-            }
-         }
-    </script>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="page-header">
+            <a href="#default" class="logo">Ro-Sham-Bo</a>
+            <div class="page-header-right">
+              <a class="active" href="#home">Ready to play?</a>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="column left">
+                    <p>Player</p>
+                </div>
+                <div class="column middle">
+                    <p>This is some text.</p>
+                </div>
+                <div class="column right">
+                    <p>Computer</p>
+                </div>     
+              </div>
+        </div>
+        <div class="img-row">
+            <div class="img-column">
+                <img class="left" id="logo" src="pics/left-rock-hand-gesture.png" alt="rock logo">
+                <img class="right" id="logo" src="pics/right-rock-hand-gesture.png" alt="rock logo">      
+            </div>
+        </div>
+        <div class="img-row">
+            <div class="img-column">
+                <img class="left" id="logo" src="pics/left-paper-hand-gesture.png" alt="paper logo">
+                <img class="right" id="logo" src="pics/right-paper-hand-gesture.png" alt="paper logo">      
+            </div>
+        </div>
+        <div class="img-row">
+            <div class="img-column">
+                <img class="left" id="logo" src="pics/left-scissors-hand-gesture.png" alt="scissors logo">
+                <img class="right" id="logo" src="pics/right-scissors-hand-gesture.png" alt="scissors logo">      
+            </div>
+        </div>
+    </body>
 </html>
