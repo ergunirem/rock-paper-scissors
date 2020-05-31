@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="index.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="index.css">
         <!-- CSS only -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -14,40 +14,46 @@
     <body>
         <div class="page-header">
             <a href="#default" class="logo">Ro-Sham-Bo</a>
-            <div class="page-header-right">
-              <a class="active" href="#home">Ready to play?</a>
-            </div>
+        </div>
+        <div class="page-header">
+            <a class="active" href="#home">Ready to play?</a>
+        </div>
         </div>
         <div class="jumbotron">
             <div class="row">
                 <div class="column left">
-                    <p>Player</p>
+                    <p>You</p>
+                    <p>Score:</p>
+                    <p id="playerScore">0</p>
                 </div>
                 <div class="column middle">
-                    <p>This is some text.</p>
+                    <p id="roundResult"></p>
                 </div>
                 <div class="column right">
                     <p>Computer</p>
+                    <p>Score:</p>
+                    <p id="computerScore">0</p>
                 </div>     
               </div>
         </div>
         <div class="img-row">
             <div class="img-column">
-                <img class="left" id="logo" src="pics/left-rock-hand-gesture.png" alt="rock logo">
-                <img class="right" id="logo" src="pics/right-rock-hand-gesture.png" alt="rock logo">      
+                <img class="img-left" id="rock logo" src="pics/left-rock-hand-gesture.png" alt="rock logo">
+                <img class="img-right" id="rock logo" src="pics/right-rock-hand-gesture.png" alt="rock logo">      
             </div>
         </div>
         <div class="img-row">
             <div class="img-column">
-                <img class="left" id="logo" src="pics/left-paper-hand-gesture.png" alt="paper logo">
-                <img class="right" id="logo" src="pics/right-paper-hand-gesture.png" alt="paper logo">      
+                <img class="img-left" id="paper" src="pics/left-paper-hand-gesture.png" alt="paper logo">
+                <img class="img-right" id="paper" src="pics/right-paper-hand-gesture.png" alt="paper logo">      
             </div>
         </div>
         <div class="img-row">
             <div class="img-column">
-                <img class="left" id="logo" src="pics/left-scissors-hand-gesture.png" alt="scissors logo">
-                <img class="right" id="logo" src="pics/right-scissors-hand-gesture.png" alt="scissors logo">      
+                <img class="img-left" id="scissors" src="pics/left-scissors-hand-gesture.png" alt="scissors logo">
+                <img class="img-right" id="scissors" src="pics/right-scissors-hand-gesture.png" alt="scissors logo">      
             </div>
         </div>
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
