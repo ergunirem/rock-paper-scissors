@@ -1,77 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.image-section {
+    background-color: #E7E7E7;
 }
-
-
-
-
-/* Divide the header into 3 unequal columns */
-.column {
-    text-align: center;
-    float: none;
-}
-  
-.left, .right {
-    width: 15%;
-}
-  
-.middle {
-    width: 70%;
-}
- 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        float: left;
-        width: 100%;
-    }
-  }
 
 /* Style the header with a grey background and some padding */
 .page-header {
     overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-  }
-  
-  /* Style the header links */
-  .page-header a {
+    position: relative;
+    height: 200px;
+    background-image: linear-gradient( #F04B4C, #ED4433);
+}
+
+.circle {
+    stroke: black;
+    stroke-width: 0.1875em;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/* Style the header links */
+.page-header a {
     display: block;
     color: black;
     text-align: center;
+    margin-top: 30px;
     padding: 12px;
-    text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-  }
+}
   
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-  .page-header a.logo {
-    font-size: 25px;
+  /* Style the logo link */
+.page-header a.logo {
+    font-family: Georgia, sans-serif;
+    font-size: 40px;
     font-weight: bold;
-  }
+    letter-spacing: 2px;
+}
+
+
   
-  /* Change the background color on mouse-over */
-  .page-header a:hover {
-    background-color: #ddd;
+/* Change the background color on mouse-over */
+.page-header a:hover {
     color: black;
-  }
-  
-  /* Style the active/current link*/
-  .page-header a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
+}
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
