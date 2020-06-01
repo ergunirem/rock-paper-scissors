@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
 /* Divide the header into 3 unequal columns */
 .column {
     text-align: center;
@@ -77,21 +86,22 @@
   }
 
 /* Styling Hand Icons */
-
-img {
-    position: relative;
-}
-
 .img-left {
     float: left;
     width: 192px;
     height: auto;
+    position: relative;
+}
+
+.img-left:hover {
+    right:0;
 }
 
 .img-right {
     float: right;
     width: 192px;
     height: auto;
+    position: relative;
 }
 
 .img-row {
