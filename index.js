@@ -88,10 +88,14 @@ images.forEach(image => image.addEventListener("click", function (e) {
             document.getElementById("playerScore").textContent = 'You Won !';
             document.getElementById("computerScore").textContent = ` BOT = ${computerScore}`;
             document.getElementById("roundResult").textContent = `YOU = ${playerScore}`;
+            playerScore = 0;
+            computerScore = 0;
         } else {
             document.getElementById("playerScore").textContent = 'You Lost !';
             document.getElementById("computerScore").textContent = `YOU = ${playerScore}`;
             document.getElementById("roundResult").textContent = `BOT = ${computerScore}`; 
+            playerScore = 0;
+            computerScore = 0;
         }
     }
 
