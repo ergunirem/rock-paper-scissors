@@ -35,19 +35,19 @@ function computerPlay() {
 };
 
 function moveRight(e) {
-    e.style.left = parseInt(e.style.left) + 150 + 'px';
+    e.style.left = parseInt(e.style.left) + 120 + 'px';
 }
 
 function moveRightBack(e) {
-    e.style.left = parseInt(e.style.left) + -150 + 'px';
+    e.style.left = parseInt(e.style.left) + -120 + 'px';
 }
 
 function moveLeft(e) {
-    e.style.right = parseInt(e.style.right) + 150 + 'px';
+    e.style.right = parseInt(e.style.right) + 120 + 'px';
 }
 
 function moveLeftBack(e) {
-    e.style.right = parseInt(e.style.right) + -150 + 'px';
+    e.style.right = parseInt(e.style.right) + -120 + 'px';
 }
 
 let playerScore = 0;
@@ -70,22 +70,39 @@ images.forEach(image => image.addEventListener("click", function (e) {
     //Display this round's result and updated score
     if (result.includes('win')) {
         playerScore++;
-        document.getElementById("playerScore").innerHTML=playerScore;
+        document.getElementById("playerScore").innerHTML= "YOU = " + playerScore;
     }
     else if (result.includes('lose')) {
         computerScore++;
-        document.getElementById("computerScore").innerHTML=computerScore;
+        document.getElementById("computerScore").innerHTML= "BOT = " + computerScore;
+    }
+    else {
+        document.getElementById("playerScore").innerHTML= "YOU = " + playerScore;
+        document.getElementById("computerScore").innerHTML= "BOT = " + computerScore;
     }
     document.getElementById("roundResult").textContent = result;
 
+    // Displaying the final result
+    if (playerScore == 5 || computerScore == 5) {
+        if (playerScore > computerScore) {
+            document.getElementById("playerScore").textContent = 'You Won !';
+            document.getElementById("computerScore").textContent = ` BOT = ${computerScore}`;
+            document.getElementById("roundResult").textContent = `YOU = ${playerScore}`;
+        } else {
+            document.getElementById("playerScore").textContent = 'You Lost !';
+            document.getElementById("computerScore").textContent = `YOU = ${playerScore}`;
+            document.getElementById("roundResult").textContent = `BOT = ${computerScore}`; 
+        }
+    }
+
     //Move the image of player's choice forward and back
     moveRight(image);
-    setTimeout(function () {moveRightBack(image)}, 1000);
+    setTimeout(function () {moveRightBack(image)}, 500);
     
     //Move the image of computer's choice forward and back
-    const computerSelectionImage = document.getElementById(`right ` + computerSelection)
+    const computerSelectionImage = document.getElementById(`right` + computerSelection)
     moveLeft(computerSelectionImage);
-    setTimeout(function () {moveLeftBack(computerSelectionImage)}, 1000);
+    setTimeout(function () {moveLeftBack(computerSelectionImage)}, 500);
 }));
 
 
