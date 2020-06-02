@@ -1,3 +1,8 @@
+/* BACKGROUNDS */
+html {
+    background-color: #E7E7E7;
+}
+
 .image-section {
     background-color: #E7E7E7;
 }
@@ -41,9 +46,7 @@ svg {
     font-weight: bold;
     letter-spacing: 2px;
 }
-
-
-  
+ 
 /* Change the background color on mouse-over */
 .page-header a:hover {
     color: black;
@@ -62,15 +65,41 @@ svg {
   }
 
 /* Styling Hand Icons */
+.image-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.right-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.score-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    padding-bottom: 20px;
+    width: 100px;
+    word-break: normal;
+}
+
 .img-left {
     float: left;
     width: 192px;
     height: auto;
     position: relative;
-}
-
-.img-left:hover {
-    right:0;
 }
 
 .img-right {
@@ -80,20 +109,16 @@ svg {
     position: relative;
 }
 
-.img-row {
-    width: auto;
-    height: 192px;
-}
-
-.img-row::after {
-    content: "";
-    clear: both;
-    display: table;
-} 
-
-@media screen and (max-width: 500px) {
-    .img-column {
-      width: 100%;
-    }
-}
-
+/* FOOTER */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient( #F04B4C, #ED4433);
+    text-align: center;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    word-spacing: 30px;
+  }
