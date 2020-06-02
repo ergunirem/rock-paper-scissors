@@ -6,36 +6,36 @@
         <title>Irem's Rock Paper Scissors</title>
     </head>
     <body>
+        <header>
         <div class="page-header">
             <a href="#default" class="logo">Ro-Sham-Bo</a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
-                <circle fill="white" cx="0" cy="110" r="110" />
-                <circle fill="white" cx="200" cy="110" r="110" />
+                <circle class="circle" fill="#E7E7E7" cx="0" cy="100" r="100" />
+                <circle class="circle" fill="#E7E7E7" cx="200" cy="100" r="100" />
               </svg>
         </div>
-        <div class="img-row">
-            <div class="img-column">
+        </header>
+        <section class="image-section">
+            <div class="left-images">
                 <img class="img-left" id="rock" src="pics/left-rock-hand-gesture.png" alt="rock logo">
-                <p>TEXT</p>
-                <p id="playerScore">0</p>
-                <img class="img-right" id="right rock" src="pics/right-rock-hand-gesture.png" alt="rock logo">      
-            </div>
-        </div>
-        <div class="img-row">
-            <div class="img-column">
                 <img class="img-left" id="paper" src="pics/left-paper-hand-gesture.png" alt="paper logo">
-                <p id="roundResult">Make your move!</p>
-                <img class="img-right" id="right paper" src="pics/right-paper-hand-gesture.png" alt="paper logo">      
-            </div>
-        </div>
-        <div class="img-row">
-            <div class="img-column">
                 <img class="img-left" id="scissors" src="pics/left-scissors-hand-gesture.png" alt="scissors logo">
-                <p>TEXT</p>
-                <p id="computerScore">0</p>
-                <img class="img-right" id="right scissors" src="pics/right-scissors-hand-gesture.png" alt="scissors logo">      
             </div>
-        </div>
+            <div class="score-section">
+                <p>First to 5 wins</p>
+                <p id="playerScore">YOU</p>
+                <p id="roundResult">Make your move!</p>
+                <p id="computerScore">BOT</p>
+            </div>
+            <div class="right-images">
+                <img class="img-right" id="right rock" src="pics/right-rock-hand-gesture.png" alt="rock logo">
+                <img class="img-right" id="right paper" src="pics/right-paper-hand-gesture.png" alt="paper logo">
+                <img class="img-right" id="right scissors" src="pics/right-scissors-hand-gesture.png" alt="scissors logo">
+            </div>
+        </section>
+        <footer class="footer">
+            Rock Paper Scissors
+        </footer>
         <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
